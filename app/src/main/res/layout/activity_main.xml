@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="br.com.wapmesquita.whatbettergas.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Km/L"
+        android:id="@+id/textView"
+        android:layout_marginTop="26dp"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Valor"
+        android:id="@+id/textView2"
+        android:layout_marginTop="26dp"
+        android:layout_below="@+id/txtKmGas"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Desconto Aplicado (%)"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/txtValueGas"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Resultado"
+        android:id="@+id/textView4"
+        android:layout_marginTop="84dp"
+        android:layout_below="@+id/txtDiscount"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="     Gasolina   "
+        android:id="@+id/textView5"
+        android:layout_alignTop="@+id/textView6"
+        android:layout_toRightOf="@+id/textView4"
+        android:layout_toEndOf="@+id/textView4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="       Etanol       "
+        android:id="@+id/textView6"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/btnCalcular"
+        android:layout_toRightOf="@+id/textView5"
+        android:layout_toEndOf="@+id/textView5"
+        android:textAlignment="center" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/txtKmGas"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_alignRight="@+id/textView5"
+        android:layout_alignEnd="@+id/textView5"
+        android:text="11.31"
+        android:numeric="decimal"
+        android:singleLine="true"
+        android:textAlignment="center" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/txtKmEtanol"
+        android:layout_above="@+id/textView2"
+        android:layout_alignLeft="@+id/textView6"
+        android:layout_alignStart="@+id/textView6"
+        android:layout_alignRight="@+id/textView6"
+        android:layout_alignEnd="@+id/textView6"
+        android:text="8.1"
+        android:numeric="decimal"
+        android:singleLine="true"
+        android:textAlignment="center" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/txtValueGas"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignLeft="@+id/txtKmGas"
+        android:layout_alignStart="@+id/txtKmGas"
+        android:layout_toLeftOf="@+id/textView6"
+        android:layout_toStartOf="@+id/textView6"
+        android:text="3.59"
+        android:numeric="decimal"
+        android:singleLine="true"
+        android:textAlignment="center" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/txtValueEtanol"
+        android:layout_alignBottom="@+id/txtValueGas"
+        android:layout_alignLeft="@+id/txtKmEtanol"
+        android:layout_alignStart="@+id/txtKmEtanol"
+        android:layout_alignRight="@+id/txtKmEtanol"
+        android:layout_alignEnd="@+id/txtKmEtanol"
+        android:text="2.79"
+        android:numeric="decimal"
+        android:singleLine="true"
+        android:textAlignment="center" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/txtDiscount"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_toRightOf="@+id/txtValueGas"
+        android:layout_toEndOf="@+id/txtValueGas"
+        android:text="5"
+        android:numeric="decimal"
+        android:singleLine="true"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/lblResult"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Desc."
+        android:id="@+id/textView7"
+        android:layout_above="@+id/lblResult"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="27dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/txtValueDescGas"
+        android:text="3.8"
+        android:numeric="decimal"
+        android:singleLine="true"
+        android:layout_alignBottom="@+id/textView7"
+        android:layout_toRightOf="@+id/textView4"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_alignEnd="@+id/textView3"
+        android:editable="true"
+        android:textAlignment="center" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/txtValueDescEtanol"
+        android:text="2.89"
+        android:numeric="decimal"
+        android:singleLine="true"
+        android:layout_alignBottom="@+id/textView7"
+        android:layout_alignLeft="@+id/txtValueEtanol"
+        android:layout_alignStart="@+id/txtValueEtanol"
+        android:editable="true"
+        android:textAlignment="center" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        android:id="@+id/btnCalcular"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="calculate" />
+</RelativeLayout>
